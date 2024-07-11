@@ -1,4 +1,4 @@
 #
-# Copyright (c) 2023 HellTM
+# Copyright (c) 2022 Darryl deHaan
 # SPDX-License-Identifier: MIT
 #

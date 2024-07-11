@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "output_status.h": "c",
-        "profile_status.h": "c"
+        "output_status.h": "c"
     }
 }
