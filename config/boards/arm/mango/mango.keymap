@@ -27,7 +27,7 @@ keymap {
 *     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----|ALT;:|     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
 *     |     |Z/LCT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|SHF'"|     |
-*     !_____!-----'         |BSP/N|?/SHF| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
+*     !_____!-----'         |BSP/N|- _/S| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
 *                           '-----!_____!/LGUI /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
 *
@@ -47,7 +47,7 @@ default_layer {
         &none      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P          &none
         &none      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &mt LALT SEMI  &none
         &none      &mt LCTRL Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RSHIFT SQT &none
-                                    &lhkt NAV BSPC &mt LSHFT QMARK &mt LGUI ENTER      &kp SPACE   &lhkt NUM TAB &mt RCTRL ESC
+                                    &lhkt NAV BSPC &mt LSHFT MINUS &mt LGUI ENTER      &kp SPACE   &lhkt NUM TAB &mt RCTRL ESC
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
@@ -87,7 +87,7 @@ type_layer {
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans
         &trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SEMI    &trans
         &trans      &kp Z       &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &kp SQT     &trans
-                                         &lhkt NAV BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh NUM TYPE  &mt LCTRL FSLH
+                                         &lhkt NAV BSPC &kp LSHFT   &mt LALT ENTER      &kp SPACE   &ltlh NUM TYPE  &mt LCTRL QMARK
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
     >;
