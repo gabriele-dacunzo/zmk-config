@@ -11,6 +11,7 @@
 #define NAV  3
 #define CONF 4
 #define GAME 5
+#define KPAD 6
 
 / {
 keymap {
@@ -173,7 +174,7 @@ navigation_layer {
 *     |     |     |-----| F8  |-----|_____|                     |_____|-----| UP  |-----|MINUS|     |  
 *     |_____|-----| F7  |_____| F9  | F10 |                     |BTTOG| DOWN|_____|RIGHT|-----|_____|  
 *     |     | F6  |-----|TYPE |-----|_____|                     |_____|-----|PG_UP|-----|GAME |     |  
-*     |_____|-----| F1  |_____| F11 | F12 |                     |BTNXT|PG_DN|_____| END |-----|_____|  
+*     |_____|-----| F1  |_____|KPAD | F12 |                     |BTNXT|PG_DN|_____| END |-----|_____|  
 *     |     |     |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----| / ? |     |
 *     !_____!-----'         | DEL |SHIFT| /     /         \     \ | NUM |RALT |         '-----!_____!
 *                           '-----!_____!/ ENT /           \ SPC \!_____!-----'
@@ -192,9 +193,9 @@ navigation_layer {
 config_layer {
     label = "CONF";
     bindings = <
-      &trans   &trans      &kp F2       &kp F3      &kp F4  &kp F5      &bt BT_CLR &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
-      &trans   &kp F6      &kp F7       &kp F8      &kp F9  &kp F10   &out OUT_TOG &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
-      &trans   &none       &kp F1       &tog TYPE   &kp F11 &kp F12     &bt BT_NXT &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
+      &trans   &trans      &kp F2       &kp F3      &kp F4       &kp F5      &bt BT_CLR &kp RBKT  &kp LBRC  &kp RBRC  &kp MINUS &trans
+      &trans   &kp F6      &kp F7       &kp F8      &kp F9       &kp F10   &out OUT_TOG &kp DOWN  &kp UP    &kp RIGHT &tog GAME &trans
+      &trans   &none       &kp F1       &tog TYPE   &tog KPAD    &kp F12     &bt BT_NXT &kp PG_DN &kp PG_UP &kp END   &kp FSLH  &trans
                                         &kp DEL     &trans       &trans       &trans      &trans      &kp RALT      
                                         
                     &trans     &trans       &trans      &trans       &trans             &trans      &trans      &trans      &trans      &trans
@@ -236,6 +237,44 @@ game_layer {
                                             &kp ESC     &kp LCTRL   &kp SPACE           &kp ESC    &kp RCTRL   &trans
 
                     &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans
+    >;
+};
+
+/* 
+*  KEYPAD
+*  Meant as a way to use the left keyboard as a support keypad 
+*
+*        ` ~             _____                                               _____
+*        |        .-----|  4  |-----._____                       _____.-----|     |-----.
+*      _____.-----|  1  |_____|  7  | N_LK|                     |     |     |_____|     |-----._____
+*     |     | TOG |-----|  5  |-----|_____|                     |_____|-----|     |-----|     |     |  
+*     |_____|-----|  2  |_____|  8  |  +  |                     |     |     |_____|     |-----|_____|  
+*     |     |  0  |-----|  6  |-----|_____|                     |_____|-----|     |-----|     |     |  
+*     |_____|-----|  3  |_____|  9  |  -  |                     |     |     |_____|     |-----|_____|  
+*     |     |  .  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|     |     |
+*     !_____!-----'         |  *  | /   | /     /         \     \ |     |     |         '-----!_____!
+*                           '-----!_____!/ ENT /           \     \!_____!-----' 
+*                                       '--.._/             \_..--'
+*
+*
+*                          VUP                                              
+*                          __                                                __
+*                       __|  |__                                          __|  |__
+*                PREV  |_TGPLAY_|  NEXT                                  |__    __|  
+*                         |__|                                              |__|
+*                                                                             
+*                        VDOWN
+*/
+
+keypad_layer {
+    label = "KPAD";
+    bindings = <
+        &trans      &tog KPAD   &kp KP_N1   &kp KP_N4   &kp N7      &kp LNLCK           &none      &none       &none       &none       &none     &trans
+        &trans      &kp KP_N0   &kp KP_N2   &kp KP_N5   &kp N8      &kp KP_PLUS         &none      &none       &none       &none       &none     &trans
+        &trans      &kp KP_DOT  &kp KP_N3   &kp KP_N6   &kp N9      &kp KP_MINUS        &none      &none       &none       &none       &none     &trans
+                                 &kp KP_MULTIPLY     &kp KP_SLASH   &kp ENTER           &none      &none       &none
+
+                    &trans      &trans      &trans      &trans      &trans              &none      &none       &none       &none       &none
     >;
 };
 
