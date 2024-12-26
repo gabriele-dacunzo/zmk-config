@@ -27,7 +27,7 @@ keymap {
 *     |_____|-----|  S  |_____|  F  |  G  |                     |  H  |  J  |_____|  L  |-----|_____|  
 *     |     |  A  |-----|  C  |-----|_____|                     |_____|-----| , < |-----|ALT;:|     |  
 *     |_____|-----|  X  |_____|  V  |  B  |                     |  N  |  M  |_____| . > |-----|_____|  
-*     |     |Z/LCT|-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|SHF'"|     |
+*     |LCTRL|  Z  |-----'   .-'---.=|_____|.-.._           _..-.|_____|=.---'-.   '-----|SHF'"|     |
 *     !_____!-----'         |BSP/N|- _/S| / ENT /         \     \ |TAB/N|ESC/C|         '-----!_____!
 *                           '-----!_____!/LGUI /           \ SPC \!_____!-----' 
 *                                       '--.._/             \_..--'
@@ -47,7 +47,7 @@ default_layer {
     bindings = <
         &none      &kp Q       &kp W       &kp E       &kp R       &kp T               &kp Y       &kp U       &kp I       &kp O       &kp P          &none
         &none      &kp A       &kp S       &kp D       &kp F       &kp G               &kp H       &kp J       &kp K       &kp L       &mt LALT SEMI  &none
-        &none      &mt LCTRL Z &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RSHIFT SQT &none
+        &kp LCTRL  &kp Z       &kp X       &kp C       &kp V       &kp B               &kp N       &kp M       &kp COMMA   &kp DOT     &mt RSHIFT SQT &none
                                     &lhkt NAV BSPC &mt LSHFT MINUS &mt LGUI ENTER      &kp SPACE   &lhkt NUM TAB &mt RCTRL ESC
 
         &rgb_ug RGB_BRD &kp C_VOL_UP &rgb_ug RGB_BRI &kp C_VOL_DN   &none               &none       &kp RIGHT   &kp UP      &kp LEFT    &kp DOWN
